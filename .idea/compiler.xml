@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="notification" />
         <module name="eureka-server" />
         <module name="fraud" />
         <module name="customer" />
@@ -20,6 +21,7 @@
       <module name="customer" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="fraud" options="-parameters" />
+      <module name="notification" options="-parameters" />
       <module name="vksservice" options="-parameters" />
     </option>
   </component>

@@ -9,6 +9,7 @@
         <module>fraud</module>
       <module>eureka-server</module>
         <module>api-gateway</module>
+        <module>notification</module>
     </modules>
     <parent>
     <groupId>org.springframework.boot</groupId>

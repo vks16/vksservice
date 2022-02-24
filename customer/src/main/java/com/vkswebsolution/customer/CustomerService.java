@@ -1,5 +1,6 @@
 package com.vkswebsolution.customer;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -28,5 +29,10 @@ public record CustomerService(CustomerRepository customerRepository, RestTemplat
             throw new IllegalStateException("Fraudster");
         }
         //todo: send notification
+       restTemplate.postForEntity("http://NOTIFICATION/api/v1/notification",
+                new NotificationRequest(
+                       customer.getId(),
+                        "New User Registeration Success",
+                        "You have successfully Created your account"), String.class);
     }
 }
